@@ -1,1 +1,36 @@
-Algorithmic Trading: Momentum Trend Following (SPY)1. Project OverviewThis project implements a quantitative trading strategy based on the Momentum Factor. Using Python and the pandas library, I developed an automated backtesting engine to identify "Golden Cross" and "Death Cross" signals on the S&P 500 ETF (SPY) from 2020 to 2024.The objective was to mathematically capture macro-trends while filtering out daily market noise (volatility).2. The "Hard Science" MethodologyThe strategy relies on Dual Moving Average Crossover logic, a foundational concept in Asset Pricing for measuring trend persistence.Fast Signal ($\text{MA}_{50}$): A 50-day rolling mean representing short-term momentum.Slow Signal ($\text{MA}_{200}$): A 200-day rolling mean representing the long-term secular trend.Signal Logic:BUY ($1.0$): When $\text{MA}_{50} > \text{MA}_{200}$ (Golden Cross).SELL ($0.0$): When $\text{MA}_{50} < \text{MA}_{200}$ (Death Cross).Technical Note: The algorithm uses vectorized operations (numpy.where) and .shift() logic to ensure zero look-ahead bias.3. Performance Analysis (Chart Interpretation)The visualization above highlights the strategy's efficacy during distinct market regimes:Post-COVID Recovery (2020-2021): The algorithm successfully generated a BUY signal (Green Triangle) in late 2020, allowing the portfolio to capture the significant upside of the bull market.The 2022 Bear Market (Risk Management): Crucially, the system triggered a SELL signal (Red Triangle) in early 2022. By exiting the market as the trend broke down, the strategy avoided the deep drawdown that characterized the rest of that year.2023 Recovery: Re-entered the market (Green Triangle) as momentum stabilized, validating the trend reversal.4. ConclusionThis project demonstrates how simple quantitative filters can act as effective risk management tools. While Moving Averages are lagging indicators, they successfully smoothed out volatility and protected capital during the 2022 correction.Tools Used: Python, Pa ndas, NumPy, Matplotlib, YFinance.
+# Algorithmic Trading: Momentum Trend Following (SPY)
+
+![SPY Momentum Strategy](spy_golden_cross_signals.png)
+
+## 📌 Project Overview
+This project implements a quantitative trading strategy based on the **Momentum Factor**.  
+The strategy uses **Dual Moving Average Crossovers** to identify long-term market trends in the **S&P 500 ETF (SPY)**.
+
+## 🧠 Strategy Logic
+- **Fast Signal (MA50):** 50-day Simple Moving Average  
+- **Slow Signal (MA200):** 200-day Simple Moving Average  
+
+### Trading Rules
+- 🟢 **BUY** → MA50 crosses above MA200 (*Golden Cross*)
+- 🔴 **SELL** → MA50 crosses below MA200 (*Death Cross*)
+
+> Signals are shifted to eliminate look-ahead bias.
+
+## 📊 Performance Interpretation
+- **2020–2021 (Post-COVID Bull Market):**  
+  The strategy captured the major upward trend effectively.
+- **2022 (Bear Market):**  
+  A SELL signal protected the portfolio from deep drawdowns.
+- **2023 Recovery:**  
+  The strategy re-entered the market as momentum stabilized.
+
+## 🛠 Tools & Libraries
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- YFinance  
+
+## 📂 Files
+- `algorithmic_trend_following_spy.ipynb` – Full backtesting notebook  
+- `spy_golden_cross_signals.png` – Strategy visualization  
