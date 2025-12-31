@@ -1,11 +1,11 @@
+![Applied Option Pricing Heatmap](applied_option_price_heatmap.png)
+
 # Project 06 — Applied Option Pricing on Real Market Data
 
 ## Overview
 This project applies the **Black–Scholes option pricing model** to **real market data**.
 It retrieves live stock prices, estimates market volatility from historical returns,
 and computes theoretical Call and Put option prices.
-
-This project bridges **theoretical option pricing** and **real-world financial markets**.
 
 ---
 
@@ -25,23 +25,9 @@ This project bridges **theoretical option pricing** and **real-world financial m
 
 ---
 
-## Visualization
-The heatmap below shows how **Call option prices change** as:
-- The underlying stock price varies
-- Market volatility changes
-
-This chart is **generated automatically by the code** each time it runs.
-
-![Applied Option Pricing Heatmap](applied_option_price_heatmap.png)
-
----
-
 ## Key Insight
-Option prices increase as:
-- Volatility increases
-- The underlying stock price rises
-
-This visualization demonstrates how uncertainty directly affects option value.
+Option prices increase as volatility and underlying stock price increase.
+The visualization highlights how uncertainty directly affects option valuation.
 
 ---
 
@@ -57,9 +43,9 @@ This visualization demonstrates how uncertainty directly affects option value.
 ---
 
 ## Notes
-- This project uses **real market data**
-- Prices update automatically on each execution
-- Market prices may differ from theoretical values due to supply, demand, and liquidity
+- The heatmap is generated automatically by the code
+- Prices update each time the script is executed
+- Market prices may differ from theoretical values due to liquidity and demand
 
 ---
 
