@@ -1,46 +1,67 @@
-PROJECT 06 — APPLIED OPTION PRICING ON REAL MARKET DATA
-SAVE & UPLOAD STEPS (COPY–PASTE CHECKLIST)
+# Project 06 — Applied Option Pricing on Real Market Data
 
-LOCAL COMPUTER
-1) Create folder:
-   project_06_applied_option_pricing_real_market
+## Overview
+This project applies the **Black–Scholes option pricing model** to **real market data**.
+It retrieves live stock prices, estimates market volatility from historical returns,
+and computes theoretical Call and Put option prices.
 
-2) Inside the folder save files:
-   - applied_option_pricing_real_market.ipynb
-   - applied_option_pricing_real_market.py
-   - applied_option_price_heatmap.png
-   - README.md
+This project bridges **theoretical option pricing** and **real-world financial markets**.
 
-3) Run the code once and make sure:
-   - prices are printed
-   - heatmap is generated and saved
+---
 
-FOLDER STRUCTURE CHECK:
-project_06_applied_option_pricing_real_market/
-├── applied_option_pricing_real_market.ipynb
-├── applied_option_pricing_real_market.py
-├── applied_option_price_heatmap.png
-└── README.md
+## Objectives
+- Fetch real stock prices automatically
+- Estimate annualized volatility from historical data
+- Price Call and Put options using Black–Scholes
+- Visualize option price sensitivity using real market parameters
 
-GITHUB (SAME REPOSITORY)
-4) Open repository:
-   tech-stock-analysis
+---
 
-5) Create folder on GitHub:
-   project_06_applied_option_pricing_real_market/README.md
-   Commit message:
-   Create Project 06 folder (Applied Option Pricing)
+## Methodology
+1. Retrieve historical stock prices using Yahoo Finance
+2. Compute log returns and annualized volatility
+3. Apply the Black–Scholes closed-form formula
+4. Generate a sensitivity heatmap based on real data
 
-6) Upload files inside the folder:
-   - applied_option_pricing_real_market.ipynb
-   - applied_option_pricing_real_market.py
-   - applied_option_price_heatmap.png
+---
 
-7) Commit message:
-   Add applied Black-Scholes option pricing using real market data
+## Visualization
+The heatmap below shows how **Call option prices change** as:
+- The underlying stock price varies
+- Market volatility changes
 
-FINAL CHECK
-- README exists
-- Notebook opens
-- Heatmap image renders
-- Script file exists
+This chart is **generated automatically by the code** each time it runs.
+
+![Applied Option Pricing Heatmap](applied_option_price_heatmap.png)
+
+---
+
+## Key Insight
+Option prices increase as:
+- Volatility increases
+- The underlying stock price rises
+
+This visualization demonstrates how uncertainty directly affects option value.
+
+---
+
+## Tools & Libraries
+- Python
+- NumPy
+- Pandas
+- SciPy
+- Matplotlib
+- Seaborn
+- yFinance
+
+---
+
+## Notes
+- This project uses **real market data**
+- Prices update automatically on each execution
+- Market prices may differ from theoretical values due to supply, demand, and liquidity
+
+---
+
+## Author
+**Fares Awwad-Zeidan**
